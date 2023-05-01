@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA57BB5A-D769-4E8E-9879-2BDBEB980D59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BaiTapLon</RootNamespace>
+    <AssemblyName>BaiTapLon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DANGKY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGKY.Designer.cs">
+      <DependentUpon>DANGKY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANGNHAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGNHAP.Designer.cs">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qlsinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qlsinhvien.Designer.cs">
+      <DependentUpon>Qlsinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SINHVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SINHVIEN.Designer.cs">
+      <DependentUpon>SINHVIEN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DANGKY.resx">
+      <DependentUpon>DANGKY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANGNHAP.resx">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qlsinhvien.resx">
+      <DependentUpon>Qlsinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SINHVIEN.resx">
+      <DependentUpon>SINHVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\add.ico" />
+    <Content Include="images\changepassword.ico" />
+    <Content Include="images\delete.ico" />
+    <Content Include="images\refresh.ico" />
+    <Content Include="images\search.ico" />
+    <Content Include="images\update.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
